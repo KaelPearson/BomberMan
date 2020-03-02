@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8009176244056160737}
   - component: {fileID: 8009176244056160740}
   - component: {fileID: 8009176244056160743}
-  - component: {fileID: 5201606108120807782}
+  - component: {fileID: 1305366737316941242}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Knight
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &5201606108120807782
+--- !u!114 &1305366737316941242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8009176244056160736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a30e0a593cc2647a899b0003f4048f, type: 3}
+  m_Script: {fileID: 11500000, guid: b6d4732be20a8564383c478892c09f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8009176244056160736}

@@ -11,18 +11,17 @@ public class PlayerMovement : MonoBehaviour {
     string[] dir = {"","", "", ""};
     void Start() {
         if(player.name == "Player1") {
-            Debug.Log("Player1");
             dir[0] = "w";
             dir[1] = "s";
             dir[2] = "d";
             dir[3] = "a";
             movementSpeed = Player1Stats.MovementSpeed;
         } else if (player.name == "Player2") {
-            Debug.Log("Player2");
             dir[0] = "up";
             dir[1] = "down";
             dir[2] = "right";
             dir[3] = "left";
+            movementSpeed = Player2Stats.MovementSpeed;
         }
         rb = GetComponent<Rigidbody2D>();
     }

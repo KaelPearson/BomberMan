@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3032762445467282302}
   - component: {fileID: 3032762445467282299}
   - component: {fileID: 3032762445467282296}
-  - component: {fileID: 8212761665198798376}
+  - component: {fileID: 564008855792044833}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Mage
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &8212761665198798376
+--- !u!114 &564008855792044833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3032762445467282303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fee64b8ad65d84784288ea9956c72e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7839277b8456d9f4283541e1ddd78da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3032762445467282303}

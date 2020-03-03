@@ -7,6 +7,14 @@ TagManager:
   - Knight
   - Fighter
   - Wall
+  - Mage
+  - explosion
+  - Crate
+  - Player1
+  - Player2
+  - moreBomb
+  - shoe
+  - bombSize
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,7 @@
         }
     }
 
-    private static int bombSize = 1;
+    private static int bombSize = 2;
     public static int BombSize {
         get {
             return bombSize;

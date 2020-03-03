@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombDestroy : MonoBehaviour
-{
+public class Bomb2Destroy : MonoBehaviour {
     public GameObject bomb;
     public GameObject explosion;
     float timer = 0;
@@ -12,7 +11,7 @@ public class BombDestroy : MonoBehaviour
     Vector3 orgPos;
     GameObject[] gameObjects;
     void Start() {
-        bombSize = Player1Stats.BombSize;
+        bombSize = Player2Stats.BombSize;
         bombPos = bomb.transform.position;
         orgPos = bomb.transform.position;
         gameObjects = GameObject.FindGameObjectsWithTag("Wall");
@@ -46,7 +45,7 @@ public class BombDestroy : MonoBehaviour
     void TopSide() {
         for (int i = 0; i < bombSize; i++) {
             bombPos[1] = orgPos[1] + (i + 1);
-            for(int k = 0; k < gameObjects.Length; k++) {
+            for (int k = 0; k < gameObjects.Length; k++) {
                 if ((int)gameObjects[k].transform.position.y == (int)bombPos[1] && (int)gameObjects[k].transform.position.x == (int)bombPos[0]) {
                     return;
                 }
@@ -78,9 +77,9 @@ public class BombDestroy : MonoBehaviour
         BotSide();
     }
     void Update() {
-        if(timer > 2) {
+        if (timer > 2) {
             CreateExplosion();
-            Player1Stats.BombAvaiable += 1;
+            Player2Stats.BombAvaiable += 1;
             Destroy(gameObject);
         }
         timer += Time.deltaTime;

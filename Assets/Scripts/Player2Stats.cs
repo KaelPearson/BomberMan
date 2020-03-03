@@ -10,7 +10,7 @@
         }
     }
 
-    private static int bombSize = 1;
+    private static int bombSize = 5;
     public static int BombSize {
         get {
             return bombSize;
@@ -19,7 +19,15 @@
             bombSize = value;
         }
     }
-
+    private static int bombAvaiable = 8;
+    public static int BombAvaiable {
+        get {
+            return bombAvaiable;
+        }
+        set {
+            bombAvaiable = value;
+        }
+    }
     private static int bombAmount = 1;
     public static int BombAmount {
         get {

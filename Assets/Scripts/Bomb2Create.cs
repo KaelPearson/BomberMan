@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 
-public class BombCreation : MonoBehaviour {
+public class Bomb2Create : MonoBehaviour {
     public GameObject player;
     public GameObject bomb;
     Vector3 placement;
     void Update() {
-        if (Input.GetKeyDown("space") && Player1Stats.BombAvaiable > 0) {
-            Player1Stats.BombAvaiable -= 1;
+        if (Input.GetKeyDown("return") && Player2Stats.BombAvaiable > 0) {
+            Player2Stats.BombAvaiable -= 1;
             if (Mathf.Abs(player.transform.position.x) - Mathf.Abs((int)player.transform.position.x) > .5) {
                 if (player.transform.position.x < 0) {
                     placement[0] = (int)(player.transform.position.x - .5);
-                }
-                else {
+                } else {
                     placement[0] = (int)(player.transform.position.x + .5);
                 }
             } else {

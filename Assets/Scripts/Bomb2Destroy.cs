@@ -21,6 +21,7 @@ public class Bomb2Destroy : MonoBehaviour {
         orgPos = bomb.transform.position;
     }
     void CreateBox(Vector3 pos) {
+        pos[2] = -2;
         Instantiate(explosion, pos, Quaternion.identity);
     }
     void CreatePowerup(Vector3 loc) {

@@ -98,7 +98,6 @@ public class BombDestroy : MonoBehaviour
     void BotSide() {
         for (int i = 0; i < bombSize; i++) {
             bombPos[1] = orgPos[1] + (-i - 1);
-            CreateBox(bombPos);
             for (int k = 0; k < gameObjects.Length; k++) {
                 if ((int)gameObjects[k].transform.position.y == (int)bombPos[1] && (int)gameObjects[k].transform.position.x == (int)bombPos[0]) {
                     return;
@@ -111,6 +110,7 @@ public class BombDestroy : MonoBehaviour
                     return;
                 }
             }
+            CreateBox(bombPos);
         }
     }
     void CreateExplosion() {

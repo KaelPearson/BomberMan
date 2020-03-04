@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour {
             dir[1] = "s";
             dir[2] = "d";
             dir[3] = "a";
-            movementSpeed = Player1Stats.MovementSpeed;
         } else if (player.name == "Player2") {
             dir[0] = "up";
             dir[1] = "down";
@@ -28,7 +27,11 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update() {
         Vector3 pos = transform.position;
-
+        if (player.name == "Player1") {
+            movementSpeed = Player1Stats.MovementSpeed;
+        } else {
+            movementSpeed = Player2Stats.MovementSpeed;
+        }
         if (Input.GetKey(dir[0])) {
             pos.y += movementSpeed * Time.deltaTime;
         }

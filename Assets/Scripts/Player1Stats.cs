@@ -25,12 +25,4 @@
             bombAvaiable = value;
         }
     }
-    private static int bombAmount = 1;
-    public static int BombAmount {
-        get {
-            return bombAmount;
-        } set {
-            bombAmount = value;
-        }
-    }
 }

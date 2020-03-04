@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// 19 x 9
 public class BombDestroy : MonoBehaviour
 {
     public GameObject bomb;
@@ -26,15 +26,14 @@ public class BombDestroy : MonoBehaviour
     }
     void CreatePowerup(Vector3 loc) {
 
-        int rand = Random.Range(0, 5);
-        rand = 0;
+        int rand = Random.Range(0, 2);
         if (rand == 0) {
             rand = Random.Range(0, 3);
             if(rand == 0) {
                 Instantiate(speed, loc, Quaternion.identity);
             } else if (rand == 1) {
                 Instantiate(bombRange, loc, Quaternion.identity);
-            } else {
+            } else if (rand == 2){
                 Instantiate(moreBomb, loc, Quaternion.identity);
             }
         }

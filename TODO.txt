@@ -1,4 +1,8 @@
 #TODO
-LEVELS CURRENTLY ONLY ONE
+Level two design
+level three design
+tutorial
+end screen
+
 COMPLETE ART OVERHAUL
 EASTEREGG

@@ -15,6 +15,7 @@ TagManager:
   - moreBomb
   - shoe
   - bombSize
+  - Bomb
   layers:
   - Default
   - TransparentFX

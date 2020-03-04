@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8686760088313929920}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,9 +95,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bomb: {fileID: 6121905022609440351}
   speed: {fileID: 5743006206777740500, guid: 941cf2ae673415e4cb658116aaaeaa58, type: 3}
-  bombRange: {fileID: 6466626161229880351, guid: 099621c4329627c47b53c613a9bf7dba,
+  bombRange: {fileID: 6466626161229880351, guid: 0fb89c5d9208584468517d9148640e0d,
     type: 3}
-  moreBomb: {fileID: 3938131032153754582, guid: 0fb89c5d9208584468517d9148640e0d,
+  moreBomb: {fileID: 3938131032153754582, guid: 1ff5bccddf7022b4980f67d5a5d82c78,
     type: 3}
   explosion: {fileID: 4788451403525312229, guid: f6326909c2922b845a67ec6b20b93ac2,
+    type: 3}
+  explosionPart: {fileID: 2507746260037792887, guid: 63574139d3ae95a4e82428025cf1bb8d,
+    type: 3}
+  woodDestroyPart: {fileID: 1641558062021442380, guid: 7ef04c1f58c5dd543ac65ae95e0fad6b,
     type: 3}

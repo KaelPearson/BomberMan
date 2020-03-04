@@ -16,6 +16,8 @@ public class BombDestroy : MonoBehaviour
     Vector3 orgPos;
     GameObject[] gameObjects;
     GameObject[] gameObjects2;
+    public GameObject explosionPart;
+    public GameObject woodDestroyPart;
     void Start() {
         bombSize = Player1Stats.BombSize;
         bombPos = bomb.transform.position;
@@ -23,11 +25,12 @@ public class BombDestroy : MonoBehaviour
     }
     void CreateBox(Vector3 pos) {
         pos[2] = -2;
+        Instantiate(explosionPart, pos, Quaternion.identity);
         Instantiate(explosion, pos, Quaternion.identity);
     }
     void CreatePowerup(Vector3 loc) {
 
-        int rand = Random.Range(0, 2);
+        int rand = Random.Range(0, 4);
         if (rand == 0) {
             rand = Random.Range(0, 3);
             if(rand == 0) {
@@ -52,6 +55,7 @@ public class BombDestroy : MonoBehaviour
             for(int k = 0; k < gameObjects2.Length; k++) {
                 if((int)gameObjects2[k].transform.position.x == (int)bombPos[0] && (int)gameObjects2[k].transform.position.y == (int)bombPos[1]) {
                     CreatePowerup(gameObjects2[k].transform.position);
+                    Instantiate(woodDestroyPart, gameObjects2[k].transform.position, Quaternion.identity);
                     Destroy(gameObjects2[k], 0);
                     return;
                 }
@@ -70,6 +74,7 @@ public class BombDestroy : MonoBehaviour
             for (int k = 0; k < gameObjects2.Length; k++) {
                 if ((int)gameObjects2[k].transform.position.x == (int)bombPos[0] && (int)gameObjects2[k].transform.position.y == (int)bombPos[1]) {
                     CreatePowerup(gameObjects2[k].transform.position);
+                    Instantiate(woodDestroyPart, gameObjects2[k].transform.position, Quaternion.identity);
                     Destroy(gameObjects2[k], 0);
                     return;
                 }
@@ -88,6 +93,7 @@ public class BombDestroy : MonoBehaviour
             for(int k = 0; k < gameObjects2.Length; k++) {
                 if((int)gameObjects2[k].transform.position.y == (int)bombPos[1] && (int)gameObjects2[k].transform.position.x == (int)bombPos[0]) {
                     CreatePowerup(gameObjects2[k].transform.position);
+                    Instantiate(woodDestroyPart, gameObjects2[k].transform.position, Quaternion.identity);
                     Destroy(gameObjects2[k], 0);
                     return;
                 }
@@ -106,6 +112,7 @@ public class BombDestroy : MonoBehaviour
             for (int k = 0; k < gameObjects2.Length; k++) {
                 if ((int)gameObjects2[k].transform.position.y == (int)bombPos[1] && (int)gameObjects2[k].transform.position.x == (int)bombPos[0]) {
                     CreatePowerup(gameObjects2[k].transform.position);
+                    Instantiate(woodDestroyPart, gameObjects2[k].transform.position, Quaternion.identity);
                     Destroy(gameObjects2[k], 0);
                     return;
                 }

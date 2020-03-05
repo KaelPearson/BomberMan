@@ -5,6 +5,15 @@ public class BombCreation : MonoBehaviour {
     public GameObject bomb;
     Vector3 placement;
     GameObject[] gameObjects;
+    void checkBomb() {
+        for(int i = 0; i < gameObjects.Length; i++) {
+            if(placement == gameObjects[i].transform.position) {
+                return;
+            }
+        }
+        Player1Stats.BombAvaiable -= 1;
+        Instantiate(bomb, placement, Quaternion.identity);
+    }
     void Update() {
         if (Mathf.Abs(player.transform.position.x) - Mathf.Abs((int)player.transform.position.x) > .5) {
             if (player.transform.position.x < 0) {
@@ -25,18 +34,10 @@ public class BombCreation : MonoBehaviour {
             placement[1] = (int)(player.transform.position.y);
         }
         placement[2] = 0;
+
         gameObjects = GameObject.FindGameObjectsWithTag("Bomb");
         if (Input.GetKeyDown("space") && Player1Stats.BombAvaiable > 0) {
-            for (int i = 0; i < gameObjects.Length; i++) {
-                if(placement != gameObjects[i].transform.position) {
-                    Player1Stats.BombAvaiable -= 1;
-                    Instantiate(bomb, placement, Quaternion.identity);
-                }
-            }
-            if(gameObjects.Length == 0) {
-                Player1Stats.BombAvaiable -= 1;
-                Instantiate(bomb, placement, Quaternion.identity);
-            }
+            checkBomb();
         }
     }
 }

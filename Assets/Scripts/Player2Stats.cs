@@ -28,4 +28,12 @@
             bombAvaiable = value;
         }
     }
+    private static int bombTotal = 1;
+    public static int BombTotal {
+        get {
+            return bombTotal;
+        } set {
+            bombTotal = value;
+        }
+    }
 }

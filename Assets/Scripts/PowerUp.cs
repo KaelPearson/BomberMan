@@ -17,8 +17,9 @@ public class PowerUp : MonoBehaviour
                     Player1Stats.BombSize += 1;
                 } 
             } else {
-                if (Player1Stats.BombAvaiable < 6) {
+                if (Player1Stats.BombTotal < 6) {
                     Player1Stats.BombAvaiable += 1;
+                    Player1Stats.BombTotal += 1;
                 }
             }
             Destroy(gameObject);
@@ -32,8 +33,9 @@ public class PowerUp : MonoBehaviour
                     Player2Stats.BombSize += 1;
                 }
             } else {
-                if (Player2Stats.BombAvaiable < 6) {
+                if (Player2Stats.BombTotal < 6) {
                     Player2Stats.BombAvaiable += 1;
+                    Player2Stats.BombTotal += 1;
                 }
             }
             Destroy(gameObject);

@@ -38,12 +38,24 @@ public class LevelSwitch : MonoBehaviour {
             }
         }
     }
+    void resetPlayerStats() {
+        Player1Stats.BombAvaiable = 1;
+        Player1Stats.BombSize = 1;
+        Player1Stats.BombTotal = 1;
+        Player1Stats.MovementSpeed = 3;
+
+        Player2Stats.BombAvaiable = 1;
+        Player2Stats.BombSize = 1;
+        Player2Stats.BombTotal = 1;
+        Player2Stats.MovementSpeed = 3;
+    }
     // Update is called once per frame
     void Update() {
         CheckWin();
         if(over == true) {
             if(timer > 3) {
-                SceneManager.LoadScene("LevelTwo");
+                resetPlayerStats();
+                SceneManager.LoadScene("LevelOne");
             }
             timer += Time.deltaTime;
         }

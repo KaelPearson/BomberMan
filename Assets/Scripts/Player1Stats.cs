@@ -28,7 +28,7 @@
     private static int bombTotal = 1;
     public static int BombTotal {
         get {
-            return BombTotal;
+            return bombTotal;
         } set {
             bombTotal = value;
         }

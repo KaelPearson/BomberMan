@@ -30,7 +30,7 @@ public class Bomb2Destroy : MonoBehaviour {
     }
     void CreatePowerup(Vector3 loc) {
 
-        int rand = Random.Range(0, 3);
+        int rand = Random.Range(0, 4);
         if (rand == 0) {
             rand = Random.Range(0, 3);
             if (rand == 0) {

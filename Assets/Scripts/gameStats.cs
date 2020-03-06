@@ -26,4 +26,13 @@
             game = value;
         }
     }
+    private static string level = "";
+    public static string Level {
+        get {
+            return level;
+        }
+        set {
+            level = value;
+        }
+    }
 }

@@ -65,7 +65,6 @@ public class LevelSwitch : MonoBehaviour {
                         gameStats.PlayerOneWins += 1;
                     } else if(win == 2){
                         gameStats.PlayerTwoWins += 1;
-                        Debug.Log(gameStats.PlayerTwoWins);
                     }
                     SceneManager.LoadScene("GameOver");
                 } else {
@@ -74,10 +73,15 @@ public class LevelSwitch : MonoBehaviour {
                         gameStats.PlayerOneWins += 1;
                     } else if (win == 2) {
                         gameStats.PlayerTwoWins += 1;
-                        Debug.Log(gameStats.PlayerTwoWins);
                     }
                     gameStats.Game += 1;
-                    SceneManager.LoadScene("LevelOne");
+                    if (gameStats.Level == "LevelOne") {
+                        gameStats.Level = "LevelTwo";
+                        SceneManager.LoadScene("LevelTwo");
+                    } else if (gameStats.Level == "LevelTwo") {
+                        gameStats.Level = "LevelOne";
+                        SceneManager.LoadScene("LevelOne");
+                    }
                 }
             }
             timer += Time.deltaTime;

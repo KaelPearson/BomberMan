@@ -6,6 +6,7 @@ public class MenuLevelSwitch : MonoBehaviour
 {
     public string scene;
     public void ChangeScene(){
+        gameStats.Level = scene;
         SceneManager.LoadScene(scene);
     }
 }

@@ -9,18 +9,22 @@ public class LevelSwitch : MonoBehaviour {
     public Text text;
     bool over;
     float timer = 0;
+    int win = 0;
     // Start is called before the first frame update
     void Tie() {
         text.text = "Tie!";
         over = true;
+        win = 0;
     }
     void PlayerOneWin() {
         text.text = "Player One Win!";
         over = true;
+        win = 1;
     }
     void PlayerTwoWin() {
         text.text = "Player Two Win!";
         over = true;
+        win = 2;
     }
     void CheckWin() {
         if (p1 == null) {
@@ -55,7 +59,26 @@ public class LevelSwitch : MonoBehaviour {
         if(over == true) {
             if(timer > 3) {
                 resetPlayerStats();
-                SceneManager.LoadScene("LevelOne");
+                if (gameStats.Game == 4) {
+                    CheckWin();
+                    if(win == 1) {
+                        gameStats.PlayerOneWins += 1;
+                    } else if(win == 2){
+                        gameStats.PlayerTwoWins += 1;
+                        Debug.Log(gameStats.PlayerTwoWins);
+                    }
+                    SceneManager.LoadScene("GameOver");
+                } else {
+                    CheckWin();
+                    if (win == 1) {
+                        gameStats.PlayerOneWins += 1;
+                    } else if (win == 2) {
+                        gameStats.PlayerTwoWins += 1;
+                        Debug.Log(gameStats.PlayerTwoWins);
+                    }
+                    gameStats.Game += 1;
+                    SceneManager.LoadScene("LevelOne");
+                }
             }
             timer += Time.deltaTime;
         }

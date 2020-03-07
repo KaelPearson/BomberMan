@@ -79,6 +79,9 @@ public class LevelSwitch : MonoBehaviour {
                         gameStats.Level = "LevelTwo";
                         SceneManager.LoadScene("LevelTwo");
                     } else if (gameStats.Level == "LevelTwo") {
+                        gameStats.Level = "LevelThree";
+                        SceneManager.LoadScene("LevelThree");
+                    } else if (gameStats.Level == "LevelThree") {
                         gameStats.Level = "LevelOne";
                         SceneManager.LoadScene("LevelOne");
                     }

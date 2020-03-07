@@ -11,8 +11,8 @@ public class EndScript : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        text.text = "Player One wins: " + gameStats.PlayerOneWins;
-        text2.text = "Player Two wins: " + gameStats.PlayerTwoWins;
+        text.text = "Player One Wins: " + gameStats.PlayerOneWins;
+        text2.text = "Player Two Wins: " + gameStats.PlayerTwoWins;
         if(gameStats.PlayerOneWins > gameStats.PlayerTwoWins) {
             text3.text = "Player One Wins!";
         } else if (gameStats.PlayerOneWins < gameStats.PlayerTwoWins){

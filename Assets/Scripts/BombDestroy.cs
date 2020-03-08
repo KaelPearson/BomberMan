@@ -18,6 +18,7 @@ public class BombDestroy : MonoBehaviour
     GameObject[] gameObjects2;
     public GameObject explosionPart;
     public GameObject woodDestroyPart;
+    public GameObject wall;
     void Start() {
         bombSize = Player1Stats.BombSize;
         bombPos = bomb.transform.position;
@@ -39,6 +40,11 @@ public class BombDestroy : MonoBehaviour
                 Instantiate(bombRange, loc, Quaternion.identity);
             } else if (rand == 2){
                 Instantiate(moreBomb, loc, Quaternion.identity);
+            }
+        } else {
+            rand = Random.Range(0, 200);
+            if (rand == 0) {
+                Instantiate(wall, loc, Quaternion.identity);
             }
         }
     }

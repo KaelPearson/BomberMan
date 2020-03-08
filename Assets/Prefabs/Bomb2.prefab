@@ -70,8 +70,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47b0f14a2a98e9d4bb4a37c4c5277126, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.72313213, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3d6d17b9ba306b34c8f79b406b0aa827, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,3 +105,4 @@ MonoBehaviour:
     type: 3}
   woodDestroyPart: {fileID: 1641558062021442380, guid: 7ef04c1f58c5dd543ac65ae95e0fad6b,
     type: 3}
+  wall: {fileID: 3167030693643181400, guid: 9dcd32ec22491b4449649397ede87513, type: 3}

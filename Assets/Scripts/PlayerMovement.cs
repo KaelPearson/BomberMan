@@ -44,8 +44,6 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey(dir[3])) {
             pos.x -= movementSpeed * Time.deltaTime;
         }
-
-
-        transform.position = pos;
+        rb.MovePosition(pos);
     }
 }

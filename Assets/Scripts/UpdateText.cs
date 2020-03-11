@@ -15,15 +15,15 @@ public class UpdateText : MonoBehaviour
     void Update()
     {
         p1MS = Player1Stats.MovementSpeed;
-        p1MS -= 2;
+        p1MS -= 3;
         p1BS = Player1Stats.BombSize;
         p1BA = Player1Stats.BombAvaiable;
 
         p2MS = Player2Stats.MovementSpeed;
-        p2MS -= 2;
+        p2MS -= 3;
         p2BS = Player2Stats.BombSize;
         p2BA = Player2Stats.BombAvaiable;
-        text.text = "Movespeed : " + p1MS + "/5 || Bomb Size : " + p1BS + "/6 || Bomb Available : " + p1BA + "/6";
-        text2.text = "Movespeed : " + p2MS + "/5 || Bomb Size : " + p2BS + "/6 || Bomb Available : " + p2BA + "/6";
+        text.text = "Movespeed : " + p1MS + "/6 || Bomb Size : " + p1BS + "/6 || Bomb Available : " + p1BA + "/6";
+        text2.text = "Movespeed : " + p2MS + "/6 || Bomb Size : " + p2BS + "/6 || Bomb Available : " + p2BA + "/6";
     }
 }

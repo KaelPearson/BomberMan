@@ -9,7 +9,7 @@ public class PowerUp : MonoBehaviour
         
         if(collider.gameObject.tag == "Player1") {
             if(obj.tag == "shoe") {
-                if (Player1Stats.MovementSpeed < 7) {
+                if (Player1Stats.MovementSpeed < 9) {
                     Player1Stats.MovementSpeed += 1f;
                 } 
             } else if (obj.tag == "bombSize") {
@@ -25,7 +25,7 @@ public class PowerUp : MonoBehaviour
             Destroy(gameObject);
         } else if(collider.gameObject.tag == "Player2") {
             if (obj.tag == "shoe") {
-                if (Player2Stats.MovementSpeed < 7) {
+                if (Player2Stats.MovementSpeed < 9) {
                     Player2Stats.MovementSpeed += 1;
                 }
             } else if (obj.tag == "bombSize") {

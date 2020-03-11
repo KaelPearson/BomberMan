@@ -46,12 +46,12 @@ public class LevelSwitch : MonoBehaviour {
         Player1Stats.BombAvaiable = 1;
         Player1Stats.BombSize = 1;
         Player1Stats.BombTotal = 1;
-        Player1Stats.MovementSpeed = 3;
+        Player1Stats.MovementSpeed = 4;
 
         Player2Stats.BombAvaiable = 1;
         Player2Stats.BombSize = 1;
         Player2Stats.BombTotal = 1;
-        Player2Stats.MovementSpeed = 3;
+        Player2Stats.MovementSpeed = 4;
     }
     // Update is called once per frame
     void Update() {

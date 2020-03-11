@@ -1,6 +1,6 @@
 ﻿public static class Player2Stats {
 
-    private static float movementSpeed = 3;
+    private static float movementSpeed = 4;
     public static float MovementSpeed {
         get {
             return movementSpeed;

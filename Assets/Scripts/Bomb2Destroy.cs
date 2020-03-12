@@ -42,9 +42,22 @@ public class Bomb2Destroy : MonoBehaviour {
                 Instantiate(moreBomb, loc, Quaternion.identity);
             }
         } else {
-            rand = Random.Range(0, 200);
-            if (rand == 0) {
-                Instantiate(wall, loc, Quaternion.identity);
+            if (gameStats.Hell == true) {
+                rand = Random.Range(0, 3);
+                if (rand == 0) {
+                    GameObject wallSpawn = Instantiate(wall, loc, Quaternion.identity);
+                    if (gameStats.Level == "LevelTwo") {
+                        Destroy(wallSpawn, 90);
+                    } else {
+                        Destroy(wallSpawn, 30);
+                    }
+                }
+            } else {
+                rand = Random.Range(0, 100);
+                if (rand == 0) {
+                    GameObject wallSpawn = Instantiate(wall, loc, Quaternion.identity);
+                    Destroy(wallSpawn, 120);
+                }
             }
         }
     }

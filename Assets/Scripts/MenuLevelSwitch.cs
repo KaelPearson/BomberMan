@@ -9,4 +9,9 @@ public class MenuLevelSwitch : MonoBehaviour
         gameStats.Level = scene;
         SceneManager.LoadScene(scene);
     }
+    public void ChangeSceneHell() {
+        gameStats.Hell = true;
+        gameStats.Level = "LevelOne";
+        SceneManager.LoadScene("LevelOne");
+    }
 }

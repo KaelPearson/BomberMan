@@ -35,4 +35,13 @@
             level = value;
         }
     }
+    private static bool hell = false;
+    public static bool Hell {
+        get {
+            return hell;
+        }
+        set {
+            hell = value;
+        }
+    }
 }
